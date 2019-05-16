@@ -7,7 +7,7 @@ var nconf = require('nconf');
 // for dynamic configuration, so we'll pass as an argument the path
 // to the config file that Habitat will render for us on startup.
 // See ./habitat/hooks/run for the implementation details.
-nconf.file({ file: process.argv[2] || './dev-config.json' });
+nconf.file({ file: process.argv[2] });
 
 router.get('/', function(req, res, next) {
   res.render('index', {
